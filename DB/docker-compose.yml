@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: escola_db
+    restart: always
+    environment:
+      POSTGRES_DB: Escola
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql
