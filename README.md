@@ -1,6 +1,6 @@
 # ADSUniFAATProjeto - Implementação de Servidores
 
-Este repositório foi desenvolvido para a disciplina de **Implementação de Servidores** do curso de Análise e Desenvolvimento de Sistemas (A.D.S) da Unifaat. O objetivo deste projeto foi criar uma infraestrutura de servidor que envolva o uso de **Docker**, **PostgreSQL** e a construção de um banco de dados para gerenciar as informações de uma escola fictícia.
+Este repositório foi desenvolvido para a disciplina de **Implementação de Servidores** do curso de **Análise e Desenvolvimento de Sistemas** (A.D.S) da **Unifaat**. O objetivo deste projeto foi criar uma infraestrutura de servidor que envolva o uso de **Docker**, **PostgreSQL** e a construção de um banco de dados para gerenciar as informações de uma escola fictícia.
 
 ## Estrutura do Banco de Dados
 
