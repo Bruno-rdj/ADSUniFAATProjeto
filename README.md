@@ -20,4 +20,5 @@ O banco de dados `Escola` contém as seguintes tabelas:
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/Bruno-rdj/ADSUniFAATProjeto.git
+
    cd ADSUniFAATProjeto/DB
