@@ -1,100 +1,23 @@
-Claro! Me manda aqui o conteúdo do seu README.md atual para eu melhorar com base nele, e já coloco no contexto de **Análise e Desenvolvimento de Sistemas** e da matéria **Implementação de Servidores**.
+# ADSUniFAATProjeto - Implementação de Servidores
 
-Se você não tiver o conteúdo agora, posso criar uma nova versão profissional e bem formatada com base nas informações que você já me passou até aqui. Aqui vai um exemplo:
-
----
-
-### **README.md (versão melhorada)**
-
-```markdown
-# Projeto ADSUniFAAT - Banco de Dados com Docker e PostgreSQL
-
-Este repositório foi criado como parte do curso de **Análise e Desenvolvimento de Sistemas** da **UNIFAAT**, para a disciplina de **Implementação de Servidores**.
-
-O objetivo do projeto é simular a implantação de um banco de dados PostgreSQL utilizando Docker, criando a estrutura de um sistema educacional com as entidades Aluno, Turma e Professor.
-
-## Tecnologias Utilizadas
-
-- Docker
-- Docker Compose
-- PostgreSQL 15
-- SQL
+Este repositório foi desenvolvido para a disciplina de **Implementação de Servidores** do curso de Análise e Desenvolvimento de Sistemas (ADS) da Unifaat. O objetivo deste projeto foi criar uma infraestrutura de servidor que envolva o uso de **Docker**, **PostgreSQL** e a construção de um banco de dados para gerenciar as informações de uma escola fictícia.
 
 ## Estrutura do Banco de Dados
 
 O banco de dados `Escola` contém as seguintes tabelas:
 
-### **Professor**
+- **Professor**: Tabela responsável por armazenar dados dos professores, como nome, e-mail e telefone.
+- **Turma**: Armazena informações sobre as turmas, como o nome da turma, o horário das aulas e qual professor é responsável por ela.
+- **Aluno**: Contém os dados dos alunos, como nome, data de nascimento, dados de contato e a turma à qual eles pertencem.
 
-| Campo           | Tipo            | Observação           |
-|-----------------|------------------|-----------------------|
-| id_professor    | SERIAL (PK)      | Auto incremento       |
-| nome_completo   | VARCHAR(255)     | Obrigatório           |
-| email           | VARCHAR(100)     | Obrigatório           |
-| telefone        | VARCHAR(20)      | Obrigatório           |
+### Relacionamentos Entre as Tabelas
 
-### **Turma**
+- **Aluno e Turma**: Cada aluno pertence a uma turma, e uma turma pode ter vários alunos. Esse relacionamento é feito através da chave estrangeira `id_turma` na tabela `Aluno`, que referencia o campo `id_turma` da tabela `Turma`.
+- **Turma e Professor**: Cada turma é associada a um único professor, mas um professor pode ser responsável por várias turmas. A chave estrangeira `id_professor` na tabela `Turma` faz esse vínculo com a tabela `Professor`.
 
-| Campo         | Tipo           | Observação                          |
-|---------------|----------------|--------------------------------------|
-| id_turma      | SERIAL (PK)    | Auto incremento                      |
-| nome_turma    | VARCHAR(50)    | Obrigatório                          |
-| id_professor  | INT (FK)       | Referência para `Professor`          |
-| horario       | VARCHAR(100)   | Obrigatório                          |
+## Instruções para Rodar o Projeto
 
-### **Aluno**
-
-| Campo                  | Tipo           | Observação                          |
-|------------------------|----------------|--------------------------------------|
-| id_aluno              | SERIAL (PK)    | Auto incremento                      |
-| nome_completo         | VARCHAR(255)   | Obrigatório                          |
-| data_nascimento       | DATE           | Obrigatório                          |
-| id_turma              | INT (FK)       | Referência para `Turma`              |
-| nome_responsavel      | VARCHAR(255)   | Obrigatório                          |
-| telefone_responsavel  | VARCHAR(20)    | Obrigatório                          |
-| email_responsavel     | VARCHAR(100)   | Obrigatório                          |
-| informacoes_adicionais| TEXT           | Opcional                             |
-
-## Como Executar o Projeto
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/ADSUniFAATProjeto.git
-```
-
-2. Acesse a pasta do projeto:
-```bash
-cd ADSUniFAATProjeto/DB
-```
-
-3. Execute o Docker:
-```bash
-docker-compose up -d
-```
-
-4. O banco estará disponível em:
-- **Host:** `localhost`
-- **Porta:** `5432`
-- **Usuário:** `admin`
-- **Senha:** `admin`
-- **Banco:** `Escola`
-
-## Objetivo Educacional
-
-Este projeto visa desenvolver habilidades práticas em:
-
-- Gerenciamento de containers com Docker
-- Implementação de servidores de banco de dados
-- Modelagem relacional com SQL
-- Integração de ambientes de desenvolvimento modernos
-
-## Autor
-
-**Bruno Rocha**  
-Estudante de Análise e Desenvolvimento de Sistemas - UNIFAAT  
-Disciplina: Implementação de Servidores  
-Prof. [Nome do Professor, se quiser adicionar]
-
----
-
-Se você me mandar seu README original, faço uma versão ainda mais personalizada. Quer que eu continue com esse modelo ou você prefere colar aqui o seu primeiro?
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/ADSUniFAATProjeto.git
+   cd ADSUniFAATProjeto/DB
