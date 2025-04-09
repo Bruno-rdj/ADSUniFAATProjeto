@@ -15,6 +15,27 @@ O banco de dados `Escola` contém as seguintes tabelas:
 - **Aluno e Turma**: Cada aluno pertence a uma turma, e uma turma pode ter vários alunos. Esse relacionamento é feito através da chave estrangeira `id_turma` na tabela `Aluno`, que referencia o campo `id_turma` da tabela `Turma`.
 - **Turma e Professor**: Cada turma é associada a um único professor, mas um professor pode ser responsável por várias turmas. A chave estrangeira `id_professor` na tabela `Turma` faz esse vínculo com a tabela `Professor`.
 
+Pré-Requisitos
+Para rodarmos essa aplicação, devemos ter algumas ferramentas instaladas na máquina:
+
+• Docker Engine
+• Docker-Compose
+• Editor de Código de sua preferência
+
+Docker-Compose
+Siga o passos a seguir para rodar o Docker-Compose:
+
+Certifique-se de que você tem o Docker e o Docker-Compose instalados na sua máquina.
+
+docker --version
+docker-compose --version
+Execute o comando para iniciar os contêineres com o Docker-Compose:
+
+docker-compose up --build
+Caso precise parar ou remover contêineres, execute o seguinte comando no diretório raiz:
+
+docker-compose down
+
 ## Instruções para Rodar o Projeto
 
 1. **Clone o repositório:**
