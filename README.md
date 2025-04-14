@@ -24,8 +24,6 @@ Para rodar essa aplicação, precisa ter algumas ferramentas instaladas na máqu
 
 • Editor de Código de sua preferência
 
-Docker-Compose
-
 
 ### Siga o passos a seguir para rodar o Docker-Compose:
 
